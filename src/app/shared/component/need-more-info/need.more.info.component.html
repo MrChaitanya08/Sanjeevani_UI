@@ -1,0 +1,21 @@
+<div class="pathology-needinfo-div">
+    <div class="title-subheader-bold fnt16">Need more info ?</div>
+    <hr class="more-help-underline">
+    <div class="sub-header mbt10">Write to us with your queries.</div>
+    <form [formGroup]="needMoreInfo">
+        <input type="text" class="form-control mbt20" placeholder="Name" formControlName="name"
+            [ngClass]="{'error-highlight':(needMoreInfo.controls['name'].dirty 
+                                || needMoreInfo.controls['name'].touched) && (needMoreInfo.controls['name'].errors)}" />
+        <input type="text" class="form-control mbt20" placeholder="Email" formControlName="email"
+            [ngClass]="{'error-highlight':(needMoreInfo.controls['email'].dirty 
+                                || needMoreInfo.controls['email'].touched) && (needMoreInfo.controls['email'].errors)}" />
+        <textarea class="form-control mbt20 msg-height" placeholder="Message" name="message" maxlength="150"
+            autocomplete="off" formControlName="message"
+            [ngClass]="{'error-highlight':(needMoreInfo.controls['message'].dirty 
+                                || needMoreInfo.controls['message'].touched) && (needMoreInfo.controls['message'].errors)}">
+                            </textarea>
+        <!-- <input type="text" class="form-control mbt20 msg-height" placeholder="Message"/> -->
+        <button class="btn-primary sub-btn"
+            [disabled]="needMoreInfo.pristine || needMoreInfo.invalid" (click)="submitNeedMoreInfo()">Submit</button>
+    </form>
+</div>

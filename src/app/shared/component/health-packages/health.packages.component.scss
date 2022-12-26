@@ -1,0 +1,105 @@
+.health-packages-main{
+  background-color: #EDEDED;
+  padding: 30px 25px 60px 25px;
+  @media (min-width:1200px){
+    padding: 50px 160px 120px 160px;
+  }  
+}
+/* plan 2*/
+.health-row-middle{
+  margin: 0px;
+  #health-plan1{
+    margin: 0px;
+    margin-right: -50px;
+  }
+  #health-plan2{
+     margin: -60px 0px;
+     z-index: 1;
+  }
+  #health-plan3{
+    margin: 0px;
+    margin-left: -50px;
+  }
+}
+/* plan 1*/
+.health-row-first{
+  margin: 0px;
+  #health-plan1{
+    margin: -60px 0px;
+    margin-right: -50px;
+    z-index: 2;
+  }
+  #health-plan2{
+     margin: -28px 0px;
+     z-index: 1;
+  }
+  #health-plan3{
+    margin: 0px;
+    margin-left: -50px;
+  }
+}
+/* plan 3*/
+.health-row-last{
+  margin: 0px;
+  #health-plan1{
+    margin-right: -50px;
+    margin: 0px;
+  }
+  #health-plan2{
+     margin: -28px 0px;
+  }
+  #health-plan3{
+    margin: -60px 0px;
+    z-index: 1;
+    margin-left: -50px;
+  }
+}
+.health-txt{
+  color:#19191B;
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 30px;
+  text-align: center;
+  @media (min-width:1200px){
+    padding-bottom: 100px;
+  }
+}
+.health-content{
+  padding: 20px 0px;
+  font-size: 16px;
+  border: 1px solid #fff;
+  background-color: #fff;
+}
+.health-plan-font{
+  font-size: 24px;
+  color: #255471;
+  font-weight: bold;
+  text-align: center;
+}
+.health-btn{
+  border-radius: 18px;
+  border: 1px solid #f99b2f;
+  color:white;
+  width: 110px;
+  padding: 8px 12px;
+}
+.health-done-list{
+  padding: 20px 60px;
+  text-align: left;
+}
+.col-border{
+  border : 1px solid #F6F6F6;
+  background-color: #F6F6F6;
+}
+.health-checkup{
+  text-align: center;
+}
+.btn-div{
+  margin-top: 8px;
+  text-align: center;
+}
+.health-txt-underline{
+  border-top: 2px solid #f99b2f;
+  margin: 4px 0px;
+  width:100%;
+}

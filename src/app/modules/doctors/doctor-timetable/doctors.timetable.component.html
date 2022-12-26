@@ -1,0 +1,119 @@
+<div class="row page-main-banner page-header-banner-img">
+    <div class="col-12 facilities-txt">
+        <div>
+            <div class="big-facilities-txt">Doctors Timetable</div>
+            <div class="small-facilities-txt">Sanjeevani hospital has more than 41 doctor consultants for almost all of
+                your health needs.</div>
+            <div class="small-facilities-txt">All doctors associated with Sanjeevani are highly trained and have
+                tremendous experience in their ﬁeld of expertise.</div>
+        </div>
+    </div>
+</div>
+
+<div class="doctor-main">
+    <app-breadcrum [showTitle]="false"></app-breadcrum>
+
+    <div class="commom-padding">
+        <div class="doctor-header flex-start-div">
+            <div class="mgrgt-15 filter-center">Filter By: </div>
+            <div>
+                <select class="form-control form-control-sm w100pr" [ngModel]="defaultFacility"
+                    (change)="facilityChange($event)">
+                    <option [value]="0">All Departments</option>
+                    <option *ngFor="let facility of facilities" [value]="facility.RecordId">{{facility.Name}}
+                    </option>
+                </select>
+
+            </div>
+            <div class="margin-lft-rgt flex-col-center">OR </div>
+            <div>
+                <select class="form-control form-control-sm w100pr" [ngModel]="defaultDoctor"
+                    (change)="doctorChange($event)">
+                    <option [value]="0">All Doctors</option>
+                    <option *ngFor="let doctor of doctorsSlim" [value]="doctor.RecordId">
+                        <span>DR.{{doctor.DoctorName}}(</span>
+                        <span class="font-12">{{doctor.Degree}})</span>
+                    </option>
+                </select>
+            </div>
+        </div>
+
+        <div class="main-link-div padd-font">
+            <div class="row bottom-margin d-none d-md-block">
+                <div class="col-md-12 no-padding">
+                    <table class="timetable">
+                        <thead>
+                            <tr>
+                                <td>Doctor & Department</td>
+                                <td class="width-12pr">Monday</td>
+                                <td class="width-12pr">Tuesday</td>
+                                <td class="width-12pr">Wednesday</td>
+                                <td class="width-12pr">Thursday</td>
+                                <td class="width-12pr">Friday</td>
+                                <td class="width-12pr">Saturday</td>
+                                <td class="width-12pr">Sunday</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let doctor of doctors;let i = index;">
+                                <td>
+                                    <div class="heading">DR. {{doctor.DoctorName | uppercase}}</div>
+                                    <div class="mgbtm">{{doctor.FacilityName}} </div>
+                                </td>
+                                <td class="width-12pr">{{doctor.Mon}}</td>
+                                <td class="width-12pr">{{doctor.Tue}}</td>
+                                <td class="width-12pr">{{doctor.Wed}}</td>
+                                <td class="width-12pr">{{doctor.Thu}}</td>
+                                <td class="width-12pr">{{doctor.Fri}}</td>
+                                <td class="width-12pr">{{doctor.Sat}}</td>
+                                <td class="width-12pr">{{doctor.Sun}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row bottom-mgr-20 d-block d-md-none" *ngFor="let doctor of doctors;let i = index;">
+                <div class="col-12 doctor-secondhalf">
+                    <div class="heading">Doctor & Department</div>
+                    <div class="heading">DR. {{doctor.DoctorName | uppercase}}</div>
+                    <!-- <div>{{doctor.Degree}}</div> -->
+
+                    <!-- <div class="heading">Department:</div> -->
+                    <div class="mgbtm">{{doctor.FacilityName}}</div>
+                    <hr class="doctor-txt-underline">
+                    <div class="time-div">
+                        <div>Monday</div>
+                        <div>{{doctor.Mon}}</div>
+                    </div>
+                    <div class="time-div">
+                        <div>Tuesday</div>
+                        <div>{{doctor.Tue}}</div>
+                    </div>
+                    <div class="time-div">
+                        <div>Wednesday</div>
+                        <div>{{doctor.Wed}}</div>
+                    </div>
+                    <div class="time-div">
+                        <div>Thursday</div>
+                        <div>{{doctor.Thu}}</div>
+                    </div>
+                    <div class="time-div">
+                        <div>Friday</div>
+                        <div>{{doctor.Fri}}</div>
+                    </div>
+                    <div class="time-div">
+                        <div>Saturday</div>
+                        <div>{{doctor.Sat}}</div>
+                    </div>
+                    <div class="time-div">
+                        <div>Sunday</div>
+                        <div>{{doctor.Sun}}</div>
+                    </div>
+                </div>
+            </div>
+            <!-- </div> -->
+            <!-- </div> -->
+
+        </div>
+    </div>
+</div>

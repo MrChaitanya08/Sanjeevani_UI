@@ -1,0 +1,93 @@
+<div class="row page-main-banner page-header-banner-img">
+    <div class="col-12 facilities-txt">
+        <div class="animate__animated animate__backInLeft">
+            <div class="big-facilities-txt">Patient Guide</div>
+            <div class="small-facilities-txt">Important Information regarding patient's admission and discharge process.
+            </div>
+            <div class="small-facilities-txt">Additionally, we also offer affordable health check up plans for your well
+                being.
+            </div>
+        </div>
+    </div>
+</div>
+<div class="patient-guide-main">
+    <app-breadcrum></app-breadcrum>
+
+    <div class="facilities-outer-div">
+        <div class="ptguideMenu">
+            <div class="menu-div" [ngClass]="{'active':showMenu=='generalinfo'}" (click)="hideShowMenu('generalinfo')">
+                General Information
+                <div class="float-right">
+                    <i class="d-block d-md-none material-icons">
+                        {{showMenu=='generalinfo'?'keyboard_arrow_down':'keyboard_arrow_right'}}
+                    </i>
+                </div>
+            </div>
+            <div class="menu-details-div" *ngIf="isMobileDevice && showMenu=='generalinfo'">
+                <app-general-info ></app-general-info>
+            </div>
+
+            <div class="menu-div" [ngClass]="{'active':showMenu=='mediclaim'}" (click)="hideShowMenu('mediclaim')">
+                Mediclaim and TPA
+                <div class="float-right">
+                    <i class="d-block d-md-none material-icons">
+                        {{showMenu=='mediclaim'?'keyboard_arrow_down':'keyboard_arrow_right'}}
+                    </i>
+                </div>
+            </div>
+            <div class="menu-details-div" *ngIf="isMobileDevice && showMenu=='mediclaim'">
+                <app-mediclaim></app-mediclaim>
+            </div>
+
+            <div class="menu-div" [ngClass]="{'active':showMenu=='visitors'}" (click)="hideShowMenu('visitors')">
+                Visitors
+                <div class="float-right">
+                    <i class="d-block d-md-none material-icons">
+                        {{showMenu=='visitors'?'keyboard_arrow_down':'keyboard_arrow_right'}}
+                    </i>
+                </div>
+            </div>
+            <div class="menu-details-div" *ngIf="isMobileDevice && showMenu=='visitors'">
+                <app-visitors></app-visitors>
+            </div>
+
+            <div class="menu-div" [ngClass]="{'active':showMenu=='responsibilities'}"
+                (click)="hideShowMenu('responsibilities')">Responsibilities
+                <div class="float-right">
+                    <i class="d-block d-md-none material-icons">
+                        {{showMenu=='responsibilities'?'keyboard_arrow_down':'keyboard_arrow_right'}}
+                    </i>
+                </div>
+            </div>
+            <div class="menu-details-div" *ngIf="isMobileDevice && showMenu=='responsibilities'">
+                <app-responsibilities></app-responsibilities>
+            </div>
+
+            <div class="menu-div border-right-div" [ngClass]="{'active':showMenu=='amenities'}"
+                (click)="hideShowMenu('amenities')">Amenities
+                <div class="float-right">
+                    <i class="d-block d-md-none material-icons">
+                        {{showMenu=='amenities'?'keyboard_arrow_down':'keyboard_arrow_right'}}
+                    </i>
+                </div>
+            </div>
+            <div class="menu-details-div" *ngIf="isMobileDevice && showMenu=='amenities'">
+                <app-amenities></app-amenities>
+            </div>
+
+        </div>
+        <div class="menu-details-div" *ngIf="!isMobileDevice">
+            <!-- <div>
+           
+           </div> -->
+           <app-general-info *ngIf="showMenu=='generalinfo'"></app-general-info>           
+            <app-mediclaim *ngIf="showMenu=='mediclaim'"></app-mediclaim>
+            <app-visitors *ngIf="showMenu=='visitors'"></app-visitors>
+            <app-responsibilities *ngIf="showMenu=='responsibilities'"></app-responsibilities>
+            <app-amenities *ngIf="showMenu=='amenities'"></app-amenities>
+        </div>
+    </div>
+
+    <app-health-packages></app-health-packages>
+
+</div>

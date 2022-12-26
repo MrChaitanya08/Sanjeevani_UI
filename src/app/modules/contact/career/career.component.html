@@ -1,0 +1,221 @@
+<div class="row page-main-banner page-header-banner-img">
+    <div class="col-12 facilities-txt">
+        <div class="animate__animated animate__backInLeft">
+            <div class="big-facilities-txt">Career</div>
+            <div class="small-facilities-txt">
+                Thinking about joining us? Please drop us your resume and we will get in touch with you.
+            </div>
+            <div class="small-facilities-txt">
+                We offer great growth opportunities with regards to fellowship as well as courses for doctors and
+                nurses.
+                It is delight to work with Sanjeevani Hospital.
+            </div>
+        </div>
+    </div>
+</div>
+<div class="career-main">
+
+    <app-breadcrum></app-breadcrum>
+
+    <div class="career-outer-div">
+        <div class="form-outer-div">
+            <form (ngSubmit)="personalDetailsForm.form.valid && submit(careerForm )" #personalDetailsForm="ngForm"
+                [formGroup]="careerForm" novalidate class="form-cntr">
+                <div class="form-disclaimer">
+                    Apply now using below form, or send your resume to careers@sanjeevanihospitalmalad.com
+                </div>
+                <div class="row form-main-div">
+                    <div class="col-md-3 first-half flex-col">
+                        <div>
+                            <div class="fnt-bld file-div">
+                                Upload your Resume<span class="mandatory">*</span>
+                            </div>
+                            <div class="file-div">
+                                <button class="btn btn-primary" (click)="fileInput.click()">Browse</button>
+                            </div>
+                            <div class="file-div text-ellipsis">
+                                {{fileName}}
+                            </div>
+                            <input #fileInput type="file" (change)="uploadResume(fileInput.files)"
+                                style="display: none;" formControlName="resume">
+                        </div>
+                    </div>
+                    <div class="col-md-9 second-half">
+                        <div class="row form-elem">
+                            <div class="col-md-10">
+                                <div class="fnt-bld header-div">
+                                    Personal Information
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-no-padd padd-rght">
+                                        <div class="form-group">
+                                            <label class="required-label">Your Name</label>
+                                            <input type="text" class="form-control form-control-sm"
+                                                formControlName="name"
+                                                [ngClass]="{'error-highlight':(careerForm.controls['name'].dirty || careerForm.controls['name'].touched) && (careerForm.controls['name'].errors)}">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-no-padd padd-lft">
+                                        <div class="form-group">
+                                            <label class="required-label">Date Of Birth</label>
+                                            <div class="input-group input-group-sm">
+                                                <input type="text" class="form-control" #dobpicker="bsDatepicker"
+                                                    readonly bsDatepicker [maxDate]="maxDate"
+                                                    formControlName="dateOfBirth"
+                                                    [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY',containerClass: 'theme-orange',isAnimated: false, adaptivePosition: false }"
+                                                    [ngClass]="{'error-highlight':(careerForm.controls['dateOfBirth'].dirty || careerForm.controls['dateOfBirth'].touched) && (careerForm.controls['dateOfBirth'].errors)}">
+                                                <span class="input-group-append">
+                                                    <span class="input-group-text">
+                                                        <i class="fa fa-calendar icon cal-icon"></i>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-no-padd padd-rght">
+                                        <div class="form-group">
+                                            <label class="required-label">Phone Number</label>
+                                            <input type="text" class="form-control form-control-sm" maxlength="10"
+                                                formControlName="phoneNumber" (keypress)="keyPress($event)"
+                                                [ngClass]="{'error-highlight':(careerForm.controls['phoneNumber'].dirty || careerForm.controls['phoneNumber'].touched) && (careerForm.controls['phoneNumber'].errors)}">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-no-padd padd-lft">
+                                        <div class="form-group">
+                                            <label class="required-label">Email Id</label>
+                                            <input type="text" class="form-control form-control-sm"
+                                                formControlName="email"
+                                                [ngClass]="{'error-highlight':(careerForm.controls['email'].dirty || careerForm.controls['email'].touched) && (careerForm.controls['email'].errors)}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fnt-bld header-div mgr-tp">
+                                    Professional Experience
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-no-padd padd-rght">
+                                        <div class="form-group">
+                                            <label class="required-label">Total Experience</label>
+                                            <input type="text" class="form-control form-control-sm"
+                                                formControlName="experience" (keypress)="keyPress($event)"
+                                                [ngClass]="{'error-highlight':(careerForm.controls['experience'].dirty || careerForm.controls['experience'].touched) && (careerForm.controls['experience'].errors)}">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-no-padd padd-lft">
+                                        <div class="form-group">
+                                            <label class="required-label">Current Employer</label>
+                                            <input type="text" class="form-control form-control-sm"
+                                                formControlName="currentEmployer"
+                                                [ngClass]="{'error-highlight':(careerForm.controls['currentEmployer'].dirty || careerForm.controls['currentEmployer'].touched) && (careerForm.controls['currentEmployer'].errors)}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-no-padd padd-rght">
+                                        <div class="form-group">
+                                            <label class="required-label">Applying For</label>
+                                            <select class="form-control form-control-sm w100pr"
+                                                formControlName="applyingFor"
+                                                [ngClass]="{'error-highlight':(careerForm.controls['applyingFor'].dirty 
+                                                || careerForm.controls['applyingFor'].touched) && (careerForm.controls['applyingFor'].errors)}">
+                                                <option *ngFor="let job of applyFor" [value]="job.Value">{{job.Name}}
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-no-padd padd-lft">
+                                        <div class="form-group">
+                                            <label class="required-label">Current CTC</label>
+                                            <input type="text" class="form-control form-control-sm"
+                                                formControlName="currentCTC" (keypress)="keyPress($event)"
+                                                [ngClass]="{'error-highlight':(careerForm.controls['currentCTC'].dirty || careerForm.controls['currentCTC'].touched) && (careerForm.controls['currentCTC'].errors)}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button type="submit" class="btn btn-primary"
+                                        [disabled]="careerForm.pristine || careerForm.invalid">Submit</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="career-header">Current Openings</div>
+        <hr class="txt-underline">
+
+        <div class="filter-header flex-start-div">
+            <div class="mgrgt-15">Filter By: </div>
+            <div>
+                <select class="form-control form-control-sm w100pr" [ngModel]="defaultDepartment"
+                    (change)="departmentChange($event)">
+                    <option *ngFor="let department of departments" [value]="department.Value">{{department.Name}}
+                    </option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="main-link-div career-div">
+            <div class="row bottom-margin d-none d-md-block">
+                <div class="col-md-12 no-padding">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td class="width-1">Department</td>
+                                <td class="width-1">Position</td>
+                                <td class="width-2">Qualification</td>
+                                <td class="width-1">Minimum Exp</td>
+                                <td class="width-3">Job Description</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let job of filteredJobs">
+                                <td class="width-1">{{job.Department}}</td>
+                                <td class="width-1">
+                                    <div>{{job.Position}}</div>
+                                    <div>ID: {{job.RecordId}}</div>
+                                </td>
+                                <td class="width-2">{{job.Qualification}}</td>
+                                <td class="width-1">{{job.Minimumexp}}</td>
+                                <td class="width-3">{{job.Jobdescription}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row bottom-mgr-20 d-block d-md-none" *ngFor="let job of filteredJobs;let i = index;">
+                <div class="col-12 career-secondhalf">
+                    <div class="heading">Department:</div>
+                    <div>{{job.Department}}</div>
+                    <hr class="career-txt-underline">
+                    <div class="padd-div">
+                        <div>Position:</div>
+                        <div>
+                            <div>{{job.Position}}</div>
+                            <div>ID: {{job.RecordId}}</div>
+                        </div>
+                    </div>
+                    <div class="padd-div">
+                        <div>Qualification:</div>
+                        <div>{{job.Qualification}}</div>
+                    </div>
+                    <div class="padd-div">
+                        <div>Minimum Exp:</div>
+                        <div>{{job.Minimumexp}}</div>
+                    </div>
+                    <div class="padd-div">
+                        <div>Job Description:</div>
+                        <div>{{job.Jobdescription}}</div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

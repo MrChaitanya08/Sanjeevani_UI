@@ -1,0 +1,117 @@
+.facilities-all{
+    .col-md-4{
+        margin-bottom: 25px;
+        @media (min-width: 1200px) {
+            margin-bottom: 0px;
+        }
+    }
+}
+.facilities-types{
+        height: 400px;
+        cursor: pointer;
+	&:hover{
+        transform: scale(1.03);
+    }
+}
+.pad35{
+    padding: 0px 30px;
+}
+// .col-md-4{
+//     &:hover{
+//         padding: 0px 0px !important;
+//     }
+// }
+.top-margin{
+    margin-top: 0px;
+    @media (min-width: 1200px) {
+        margin-top: 40px;
+    }
+}
+.bottom-margin{
+    margin-bottom: 0px;
+    @media (min-width: 1200px) {
+        margin-bottom: 40px;
+    }
+}
+
+.facilities-firsthalf{
+    border:1px solid #E6E6E6;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 55%;
+    width: 100%;
+    
+}
+.facilities-secondhalf{
+    border:1px solid #E6E6E6;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 45%;
+    width: 100%;
+    background-color: #fff;
+    @media screen and (min-width:1200px){
+        padding: 10px 20px;
+    }
+    padding: 10px 15px;
+}
+.fac-header{
+    font-size: 18px;
+    color:#255471;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.fac-subheader{
+    font-size: 14px;
+    color:#255471;
+    margin-bottom: 10px;
+}
+.learn-more{
+    font-size: 14px;
+    color:#F99B2F;
+    position: absolute;
+    font-size: 14px;
+    color:#F99B2F;
+    padding-bottom: 10px;
+    bottom: 0px;
+}
+.facilities-room-img{
+    background: url(../../../../assets/img/facilities/facilities_home/rooms_home.jpg) no-repeat;
+    background-size: 100% 100%;
+    
+}
+.facilities-pathology-img{
+    background: url('../../../../assets/img/facilities/facilities_home/pathology_home.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.facilities-dialysis-img{
+    background: url('../../../../assets/img/facilities/facilities_home/dialysis_home.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.facilities-icu-img{
+    background: url('../../../../assets/img/facilities/facilities_home/icu_home.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.facilities-maternity-img{
+    background: url('../../../../assets/img/facilities/facilities_home/maternity_home.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.facilities-op-img{
+    background: url('../../../../assets/img/facilities/facilities_home/operation_home.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.facilities-bb-img{
+    background: url('../../../../assets/img/facilities/facilities_home/bloodbank_home.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.facilities-pharmacy-img{
+    background: url('../../../../assets/img/facilities/facilities_home/pharmacy_home.jpg') no-repeat;
+}
+.facilities-xray-img{
+    background: url('../../../../assets/img/facilities/facilities_home/xray_home.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+#first-fac-row,
+#second-fac-row,
+#third-fac-row{
+    min-height: 390px;
+}

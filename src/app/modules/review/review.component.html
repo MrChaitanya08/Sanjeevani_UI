@@ -1,0 +1,102 @@
+<div class="container-fluid bg-review">
+    <div class="row" id="reviewpage">
+        <div class="col-12">
+            <div class="review-cntr">
+                <div class="header">
+                    <h3>Write A Review</h3>
+                </div>
+                <div class="main-cntr">
+                    <p>
+                        Let us know about your experience with Sanjeevani hospital and its doctors. It will help us
+                        improve our facility and services.
+                    </p>
+                    <form [formGroup]="reviewForm" class="form-container mt-3">
+                        <div class="form-group">
+                            <label for="selectDoctor" class="required-label">SELECT DOCTOR</label>
+                            <select class="form-control form-control-sm w50pr" required formControlName="selectDoctor"
+                                (change)="doctorChange($event)"
+                                [ngClass]="{'error-highlight':(reviewForm.controls['selectDoctor'].dirty || reviewForm.controls['selectDoctor'].touched) && (reviewForm.controls['selectDoctor'].errors)}">
+                                <option *ngFor="let doctor of doctorsSlim" [value]="doctor.RecordId">
+                                    <ng-template [ngIf]="!doctor.RecordId">
+                                        <span>{{doctor.DoctorName}}</span>
+                                    </ng-template>
+                                    <ng-template [ngIf]="doctor.RecordId">
+                                        <span>DR.{{doctor.DoctorName}}(</span>
+                                        <span class="font-12">{{doctor.Degree}})</span>
+                                    </ng-template>
+                                </option>
+                            </select>
+                        </div>
+                        <span class="blue-txt">
+                            <div *ngIf="!selectedDoctor || !selectedDoctor.RecordId; else doctorTemplate">
+                                Select a doctor to give your feedback
+                            </div>
+                            <div class="img-cntr">
+                                <img [src]="doctorImageSrc" alt="Doctor Image"
+                                    title="Dr. {{selectedDoctor?.DoctorName}}" class="img-fluid rounded-circle">
+                                <!-- <span class="title">{{selectedDoctor.Degree}}</span> -->
+                            </div>
+                            <ng-template #doctorTemplate>                                
+                                Tell us your experience with {{ selectedDoctor?.DoctorName }}.
+                            </ng-template>
+                        </span>
+                        <div class="form-group">
+                            <label class="required-label">OVERALL RATING</label>
+                            <div class="review-star">
+                                <i class="material-icons hand-pointer" [ngClass]="{'star-color':addedStar.length>0}"
+                                    (click)="addStar(0)">grade</i>
+                                <i class="material-icons hand-pointer" [ngClass]="{'star-color':addedStar.length>1}"
+                                    (click)="addStar(1)">grade</i>
+                                <i class="material-icons hand-pointer" [ngClass]="{'star-color':addedStar.length>2}"
+                                    (click)="addStar(2)">grade</i>
+                                <i class="material-icons hand-pointer" [ngClass]="{'star-color':addedStar.length>3}"
+                                    (click)="addStar(3)">grade</i>
+                                <i class="material-icons hand-pointer" [ngClass]="{'star-color':addedStar.length>4}"
+                                    (click)="addStar(4)">grade</i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="required-label">TITLE</label>
+                            <input type="text" class="form-control form-control-sm w50pr" formControlName="title"
+                                required autocomplete="off" [ngClass]="{'error-highlight':(reviewForm.controls['title'].dirty 
+                                || reviewForm.controls['title'].touched) && (reviewForm.controls['title'].errors)}">
+                        </div>
+                        <div class="form-group">
+                            <label class="required-label">Review</label>
+                            <textarea class="form-control form-control-sm" rows="5" formControlName="review" required
+                                [ngClass]="{'error-highlight':(reviewForm.controls['review'].dirty 
+                                || reviewForm.controls['review'].touched) && (reviewForm.controls['review'].errors)}"></textarea>
+                        </div>
+                        <div class="note-cntr">
+                            <p>
+                                All feedback go under strict moderation process before publishing to check abusive
+                                language, threats, superlative comments on medical abilities and so on.
+                            </p>
+                            <!-- <a href="" class="d-block">Read more</a> -->
+                        </div>
+                        <div class="form-group">
+                            <label class="required-label">YOUR NAME</label>
+                            <input type="text" class="form-control form-control-sm" formControlName="name" required
+                                autocomplete="off" [ngClass]="{'error-highlight':(reviewForm.controls['name'].dirty 
+                                || reviewForm.controls['name'].touched) && (reviewForm.controls['name'].errors)}">
+                        </div>
+                        <div class="form-group">
+                            <label class="required-label">YOUR EMAIL</label>
+                            <input type="text" class="form-control form-control-sm" formControlName="email" required
+                                autocomplete="off" [ngClass]="{'error-highlight':(reviewForm.controls['email'].dirty 
+                                || reviewForm.controls['email'].touched) && (reviewForm.controls['email'].errors)}">
+                        </div>
+                        <div class="btn-cntr">
+                            <button type="button" class="btn btn-primary mr10"
+                                [disabled]="addedStar.length==0 || reviewForm.pristine || reviewForm.invalid"
+                                (click)="submitReview()">SUBMIT</button>
+                            <button type="button" class="btn btn-secondary" (click)="canelReview()">CANCEL</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            <div class="backdrop"></div>
+        </div>
+    </div>
+</div>

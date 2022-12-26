@@ -1,0 +1,398 @@
+.covid-main{
+    color:#212529;
+    h1, h2, h3, h4, h5, h6{
+      font-weight: 500 !important;
+      color:inherit;
+    }
+    p{
+      font-size: 18px;
+    }
+    h6{
+      font-size: 18px;
+    }
+    * {
+        box-sizing: border-box;
+        font-family: "Open Sans", sans-serif;
+        font-family: "Roboto", sans-serif;
+    }
+    html {
+        scroll-behavior: smooth;
+        line-height: 1.75;
+    }
+    .sticky-top{
+      z-index: 1;
+    }
+      
+      /*------------navbar------------------*/
+      // .navbar-brand{width:30%;}
+      // .navbar-brand img {
+      //   width: 50%;
+      // }
+      .navbar-covid {
+        background-color: #9BE5F0;
+        box-shadow: 4px 5px 6px rgba(0, 0, 0, 0.4);
+        position: relative; 
+      }
+      .navbar-covid-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 3px;
+        margin-bottom: 0;
+        list-style: none;
+        margin-right: 0px;
+        @media screen and (min-width:1200px){
+          margin-right: 10px;
+          padding: 25px 30px;
+          justify-content: flex-end;
+          font-size: 18px;
+        }
+      }
+      .nav-covid-item {
+        @media screen and (min-width:1200px){
+          padding: 0px 10px;
+        }
+        margin: 0;
+      }
+      .nav-covid-link {      
+        font-family: "roboto", sans-serif;
+        font-size: 14px;
+        color:#035A90 !important;
+        @media screen and (min-width:1200px){
+          font-size: 17px;
+        }
+      }
+      .nav-covid-link:hover {
+        color:#ffffff !important;
+        text-decoration: none;
+      }
+      .highlight {      
+        color: #fff!important;
+        margin-left: 10px;
+        border-radius: 5px;
+        padding: 7px 7px;background-color: #035A90;
+      }
+      
+      /*------------about------------------*/
+      .aboutcorona {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        background-color: #fcfcfc;
+      }
+      .imageinfo img {
+        width: 85%;
+      }
+      .textinfo h1 {
+        font-size: 2.1rem;
+        color: #0049a7;
+        letter-spacing: 0.5px;
+        padding-bottom: 20px;
+        font-family: "roboto", sans-serif;
+      }
+      .textinfo p {
+        font-size: 1rem;
+        font-family: "Open Sans", sans-serif;
+      }
+      .aboutspread {
+        text-align: center;
+        padding-top: 70px;
+        padding-bottom: 70px;
+        background-color: #d3e5ff;
+      }
+      .aboutspread h1 {
+        font-size: 2.3rem;
+        padding-bottom: 50px;
+        color: #2a81ea;
+        font-family: "roboto", sans-serif;
+      }
+      .aboutspread h3 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        padding-bottom: 10px;
+        color: #255471;
+        font-family: "Open Sans", sans-serif;
+      }
+      .aboutspread .card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      }
+      .aboutspread .card-title {
+        color: #2a81ea;
+      }
+      .aboutspread img {
+        border-bottom: 6px solid #9cc2f7;
+      }
+      .button3 {
+        border-radius: 40px;
+        margin-top: 50px;
+        padding: 12px 25px;
+      }
+      
+      /*------------symptoms------------------*/
+      
+      .symptoms {
+        background-color: #fff;
+        padding-top: 70px;
+        padding-bottom: 70px;
+      }
+      .symptoms h1 {
+        font-size: 2.3rem;
+        padding-bottom: 20px;
+        font-family: "roboto", sans-serif;
+        color: #0049a7;
+      }
+      .symptoms img {
+        margin: 28px 0;
+        width: 200px;
+        border-radius: 50%;
+        border: 5px solid #9cc2f7;
+      }
+      .symptoms h5 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        color: #2a81ea;
+      }
+      
+      /*------------prevention------------------*/
+      
+      .prevention {
+        background-color: #eef5fd;
+        padding-top: 50px;
+        padding-bottom: 30px;
+        justify-content: center;
+      }
+      .prevention h1 {
+        text-align: center;
+        letter-spacing: 0.5px;
+        font-size: 2.5rem;
+        color: #255471;
+        padding-bottom: 40px;
+        font-family: "roboto", sans-serif;
+        color: #0049a7;
+      }
+      .prevention .card {
+        border-radius: 10px;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+        border: none;
+        margin-bottom: 50px;
+      }
+      .prevention .card-header {
+        padding: 25px 0 20px 0;
+        color: #fff;
+        border: none;
+      }
+      .do .card-header {
+        background-color: #3b99ff;
+      }
+      .do .icon {
+        width: 116px;
+        height: 116px;
+        padding: 10px;
+      }
+      .do h4 {
+        font-size: 1.7rem;
+      }
+      .do h5 {
+        padding: 8px 0;
+      }
+      .contentinfo {
+        display: flex;
+        flex-direction: row;
+        h5{
+          font-size: 20px;
+        }
+        p{
+          font-size: 16px;
+        }
+      }
+      .dont .card-header {
+        background-color: #255471;
+      }
+      .dont .icon {
+        width: 116px;
+        height: 116px;
+        padding: 10px;
+      }
+      .dont h4 {
+        font-size: 1.7rem;
+      }
+      .dont h5 {
+        padding: 8px 0;
+      }
+      
+      /*------------wash hands------------------*/
+      
+      .washhands {
+        background-color: #fff;
+        padding-top: 70px;
+        padding-bottom: 80px;
+        font-weight: bold !important;
+      }
+      .washhands h1 {
+        color: #2a81ea;
+        text-transform: uppercase;
+      }
+      .washhands p {
+        padding: 20px 0 30px 0;
+        font-weight: 500;
+        color: #255471;
+      }
+      .washhands img {
+        background-color: #fff;
+        border-radius: 50%;
+        margin-bottom: 10px;
+        width: 150px;
+        box-shadow: 0.1rem 0.1rem 0.8rem 0.5rem rgba(0, 0, 100, 0.09);
+      }
+      .washhands h6 {
+        color: #2a81ea;
+        padding: 10px 0;
+      }
+      
+      /*------------treatments------------------*/
+      
+      .treatment {
+        background-color: #2766bb;
+        color: #fff;
+      }
+      .treatment h1 {
+        text-align: center;
+        font-family: "roboto", sans-serif;
+        padding-bottom: 10px;
+        font-size: 2.5rem;
+        padding-top: 50px;
+        letter-spacing: 1px;
+      }
+      .textblock h5 {
+        color: #73e3ff;
+        padding-bottom: 10px;
+      }
+      .textblock h2 {
+        font-family: "Open Sans", sans-serif;
+        padding-bottom: 10px;
+        font-size: 32px;
+        color: #fff;
+      }
+      .treatment h6 {
+        line-height: 1.5;
+        font-family: "roboto", sans-serif;
+        color: #73e3ff;
+      }
+      .textblock p {
+        font-family: "Open Sans", sans-serif;
+        padding-top: 5px;
+      }
+      .textblock {
+        margin-right: 50px;
+        margin-top: 35px;
+        text-align: left;
+        line-height: 1.65;
+        padding-left: 20px;
+        font-family: "Open Sans", sans-serif;
+      }
+      .selfcare {
+        background-color: #1b47a1;
+        padding: 20px 40px;
+        margin-top: 20px;
+        font-family: "Open Sans", sans-serif;
+        border-radius: 7px;
+        margin-bottom: 50px;
+        text-align: left;
+      }
+      .selfcare p {
+        font-size: 0.98rem;
+      }
+      
+      /*------------faq------------------*/
+      
+      .faq {
+        padding: 50px 0;
+      }
+      .faq img {
+        width: 75%;
+        margin: 0 0 30px 60px;
+      }
+      .faq h1 {
+        text-align: center;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 700;
+        padding: 10px 0 25px 0;
+        color: #2a81ea;
+      }
+      .faq .btn {
+        white-space: normal;
+        text-align: left !important;
+      }
+      .faq .card-header {
+        background-color: aliceblue;
+        border-color: lightblue;
+        overflow-wrap: break-all;
+      }
+      .faq .card {
+        border: transparent;
+      }
+      
+      /*------------contact------------------*/
+      
+      .contact {
+        background-color: #2d6bbd;
+        border: transparent;
+        color: #fff;
+      }
+      .contact h1 {
+        text-align: center;
+        padding-bottom: 29px;
+        font-size: 2.2rem;
+        padding-top: 40px;
+        letter-spacing: 0.5px;
+        font-family: "roboto", sans-serif;
+      }
+      .contact p {
+        line-height: 1.65;
+      }
+      .contact h4 {
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.8rem;
+      }
+      .button4 {
+        font-size: 1.15rem;
+        padding: 10px 35px;
+        font-weight: 500;
+        border-radius: 5px;
+        color: #2d6bbd;
+        margin: 40px 0;
+      }
+      
+      /*------------footer------------------*/
+      
+      .footer {
+        text-align: center;
+        background-color: #f0f8ff;
+        padding-top: 15px;
+        margin: 0;
+      }
+      .footer p {
+        font-size: 0.9rem;
+      }
+      .jumbotron {
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+      }
+      
+       .card-deck{
+        padding:0px 15px;
+        @media screen and (min-width:1200px){
+          padding:0px 15px;
+        }
+      }
+      .faq-btn{
+        color:#007bff !important;
+        cursor: pointer;
+        &:hover{
+          text-decoration: underline !important;
+        }
+      }
+}

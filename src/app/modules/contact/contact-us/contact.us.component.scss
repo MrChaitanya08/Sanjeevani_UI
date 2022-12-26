@@ -1,0 +1,217 @@
+@import '../../../../assets/scss/variable.scss';
+
+.bg-review {
+    background: url(../../../../assets/img/contact-us/background.jpg) no-repeat;
+    background-size: cover;
+    .review-cntr {
+        z-index: 1;
+        position: relative;
+        margin: 1rem auto;
+        border-radius: 5px;
+        background: $white;
+    }
+    .header {
+        background: $primary-color;
+        border-radius: 5px 5px 0 0;
+        text-align: center;
+    }
+    h3 {
+        color: $white;
+        line-height: 4rem;
+        font-weight: normal;
+    }
+    .main-cntr {
+        padding: 1rem 2rem 2rem;
+    }
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .form-container>* {
+        width: 100%;
+    }
+    .mat-flat-button {
+        min-width: 130px;
+        text-transform: uppercase;
+        margin: 0 1rem;
+        border-radius: 10px;
+        border: 1px solid transparent;
+        &.mat-flat-button.mat-primary {
+            background: $primary-color;
+        }
+    }
+    .btn-cntr {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 5px;
+    }
+    .note-cntr {
+        background: #fbe8aa;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        margin: 1rem 0;
+        p,
+        a {
+            font-size: 0.875rem;
+            line-height: 1.5rem;
+            margin: 0;
+        }
+    }
+    .blue-txt {
+        color: $secondary-color;
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+        margin: 10px 0 26px 0px;
+        text-align: center;
+    }
+    .review-star {
+        font-size: 14px;
+        color: #C8D0D6;
+    }
+    .hand-pointer{
+        cursor: pointer;
+    }
+    .star-color {
+        color: #FFBC27;
+    }
+    lable {
+        color: $secondary-color
+    }
+    .img-cntr {
+        max-width: 300px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .title {
+        font-size: 1rem;
+        color: $dark-grey;
+        display: block;
+        margin-bottom: 16px;
+    }
+}
+
+@media (min-width: 992px) {
+    .review-cntr {
+        max-width: 850px;
+    }
+    .form-container .mat-form-field {
+        max-width: 50%;
+    }
+    .bg-review .img-cntr {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .bg-review .blue-txt {
+        text-align: left;
+        width: 50% !important;
+    }
+}
+#reviewpage{
+   .form-container label{
+       font-size: 14px;
+       color:#255471
+   }
+}
+.flex-space-bt{
+    @media screen and (min-width:1200px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+label{
+    margin-bottom: 4px !important;
+}
+.w-48pr{
+    @media screen and (min-width:1200px) {
+        width:48%;
+    }
+}
+.hr-divider{
+    border-top: 1px solid #255471;
+    margin: 25px 0px 20px 0px;
+    width: 100%;
+    @media screen and (min-width:1200px) {
+        margin: 25px 0px 25px 0px;
+    }
+}
+.contact-div{
+  font-size: 14px;
+  color: #255471;
+  margin:0px;
+}
+.contact-heading{
+   font-size: 16px;
+   padding-bottom: 15px;
+}
+.f-bold{
+    font-weight: bold;
+}
+.fb{
+    background: url(../../../../assets/img/contact-us/fbicon.png) no-repeat;
+}
+.tw{
+    background: url(../../../../assets/img/contact-us/TWicon.png) no-repeat;
+}
+.yout{
+    background: url(../../../../assets/img/contact-us/YTIcon.png) no-repeat;
+}
+.bd-rght{
+    border-bottom: 1px solid #dedede;
+    @media screen and (min-width:1200px) {
+        border-right: 1px solid #dedede;
+        border-bottom: 0;
+    }
+}
+.bd-top{
+    border-top: 1px solid #dedede;
+}
+.padd-bt{
+    padding-bottom:10px;
+    @media screen and (min-width:1200px) {
+        padding-bottom:5px;
+        
+    }
+}
+.padd-col-bt{
+    padding-bottom: 0px;
+    @media screen and (min-width:1200px) {
+        padding-bottom: 15px;
+        
+    }
+}
+.padd-col-top{
+    padding-top: 10px;
+    @media screen and (min-width:1200px) {
+        padding-top: 20px;
+        
+    }
+}
+.padd-col-lft{
+    padding: 10px 0px 0px 0px;
+    @media screen and (min-width:1200px) {
+        padding: 0px 25px;
+        
+    }
+}
+.padd-social{
+    padding-top:10px;
+    padding-left: 0px;
+    @media screen and (min-width:1200px) {
+        padding-left: 25px;
+        padding-top:20px;
+    }
+}
+.img-cont{
+    display: flex;
+    margin-top: 10px;
+}
+.img-style{
+    width: 50px;
+    height: 45px;
+    background-size: 45px 45px;
+}
+

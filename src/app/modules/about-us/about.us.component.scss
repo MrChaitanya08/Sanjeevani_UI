@@ -1,0 +1,257 @@
+.about-us-main{
+    font-size: 16px;
+    color:#255471;
+    .row{
+        margin-left:0px;
+        margin-right:0px;
+    }
+}
+.facilities-outer-div{
+    padding:10px 25px 0px 25px;
+    @media screen and (min-width:1200px){        
+        padding: 10px 60px 50px 90px;
+    }
+}
+.about-us-banner-img{
+    background: url('../../../assets/img/facilities/facilities_MainBanner.jpg') no-repeat;   
+}
+.about-div{
+    height:360px;
+    .col-md-6{
+        padding-top: 0px;
+        @media (min-width: 1200px) {
+            padding-top: 20px;
+        }
+    }
+    
+}
+.about-us-pic1{
+    background: url('../../../assets/img/about-us/about-us-img-1.jpg') no-repeat;  
+    width: 100%;
+    background-size: 100% 100%;
+    height: 100%;
+}
+.page-main-banner{
+    height: 165px;
+    @media (min-width: 1200px) {
+        height: 150px;
+    }
+}
+.mission-div{
+    background-color:#F5F5F5;
+    padding: 10px 0px 20px 0px;    
+    @media (min-width: 1200px) {
+        padding: 40px 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }    
+    .mission-col-div{
+        box-shadow:  4px 5px 6px rgba(0, 0, 0, 0.2);
+        background-color:#fff;
+        margin-top:20px;
+        border-radius: 8px;        
+        padding: 0px 25px 20px 25px;
+        @media (min-width: 1200px) {
+            width: 32.5%;
+            border:1px solid #fff;
+            border-top:0px;
+            margin-top:0px;
+            padding: 20px 40px;
+        }
+    }
+}
+.margin-rgt{
+margin-right: 20px;
+}
+.about-us-header{
+    font-size: 26px;
+    font-weight: bold;  
+    width: 100%;   
+}
+.pdb-15{
+    padding-bottom: 15px;   
+}
+.about-us-sub-header{
+    font-size:16px;
+}
+.pd-5-bold{
+    padding:0px 0px 5px 0px;
+    font-weight: bold;
+}
+.line-height{
+    line-height: 30px;
+}
+.txt-underline{
+    border-top: 5px solid #f99b2f;
+    margin: 6px 0px;
+    width:20%;
+    @media (min-width: 1200px) {
+      width:7%;
+    }
+}
+.about-us-sec{
+     border-top:2px solid #B2B2B2;
+     padding-top: 20px;
+}
+.pdb40{
+    padding-bottom: 40px;
+}
+.gallery-img{
+    //padding-top: 20px;
+   li{
+      border: 1px solid #B2B2B2;
+   }
+}
+#google-reviews{
+    padding: 30px;
+}
+.about-img-div{
+    margin-bottom: 25px;
+    @media (min-width: 1200px) {
+        height: 350px;
+        margin-bottom: 0px;
+    }
+    .row{
+        height: 100%;
+    }
+}
+.about-img-padrgt{
+    padding-left: 0px;
+    padding-right: 0px;
+    @media (min-width: 1200px) {
+        padding-right: 15px;
+      }
+}
+.about-img{
+    border:1px solid #E6E6E6;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height:300px;
+    background: url('../../../assets/img/about-us/sanjeevani.jpg') no-repeat;
+    background-size: 100% 100%;    
+    @media screen and (min-width:1200px) {
+        height:auto;
+        border-bottom-left-radius: 8px;
+        border-top-right-radius: 0px;
+    }
+}
+.about-secondhalf{
+    border:1px solid #E6E6E6;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 0px;
+    @media (min-width: 1200px) {
+        height: 100%;
+        border-bottom-right-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 0px;
+      }
+    width: 100%;
+    padding: 20px 15px 10px 15px
+
+}
+.svg-div{
+    padding:20px 0px;
+}
+.svg-img{
+    width: 65px;
+    height: 65px;
+}
+.value-div{
+    background-color: #ffab4b;
+    padding:40px 0px;
+}
+
+.img-cntr-val {
+    width: 100%;
+    height: 100%;
+    img {
+        // margin: 2rem 0 1rem;
+        // max-width: 300px;
+        width: 100%;
+        width: 440px;
+        height: 440px;
+    }
+}
+.svg-img-values{
+    width:60px;
+    height:60px;
+}
+.flexx-start{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+    
+}
+.mgr-left{
+    margin-left: 40px;
+}
+.mgb-0{
+    margin-bottom: 0px;
+}
+.about-head-div{
+    padding:20px 0px;
+}
+// core teamm css
+.our-team {
+    padding: 1.5rem 2rem;
+    background-color: #f7f7f7;
+    .img-cntr {
+        position: relative;
+        margin-top: 2rem;
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
+        img {
+            margin: 2rem 0 1rem;
+            max-width: 300px;
+            width: 100%;
+        }
+        .icon {
+            width: 82px;
+            height: 82px;
+            position: absolute;
+            top: 0;
+            right: 18px;
+            border-radius: 50%;
+            background: #255471;
+            img {
+                width: 44px;
+                margin-top: 18px;
+            }
+        }
+    }
+    h5 {
+        color: #3ea6f5;
+        font-weight: 500;
+    }
+    p {
+        margin: 0.2rem 0;
+        color: black;
+    }
+}
+.m-3{
+    margin: 16px 0px !important;
+    @media screen and (min-width: 1200px) {
+       margin: 16px !important;
+    }    
+}
+.gallery-slider .flexslider {
+    max-height: 350px !important;
+    min-height: 320px !important;
+    @media screen and (min-width: 1200px) {
+        max-height: 400px !important;
+     }   
+   .slides img {
+    max-width: 400px;
+    max-height: 480px;
+    margin: 0 auto;
+    @media screen and (min-width: 1200px) {
+        max-width: 370px;
+        max-height: 370px;
+     }
+   }
+  
+}

@@ -1,0 +1,94 @@
+<div class="row page-main-banner page-header-banner-img">
+    <div class="col-12 facilities-txt">
+        <div class="animate__animated animate__backInLeft">
+            <div class="big-facilities-txt">Doctors List</div>
+            <div class="small-facilities-txt">Sanjeevani hospital has more than 41 doctor consultants for almost all of
+                your health needs.</div>
+            <div class="small-facilities-txt">All doctors associated with Sanjeevani are highly trained and have
+                tremendous experience in their ﬁeld of expertise.</div>
+        </div>
+    </div>
+</div>
+
+<div class="doctor-main">
+    <app-breadcrum></app-breadcrum>
+
+    <div class="commom-padding">
+        <div class="doctor-header flex-start-div">
+            <div class="mgrgt-15 filter-center">Filter By Department: </div>
+            <div>
+                <!-- <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Dropdown
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                      <button class="dropdown-item" type="button">Action</button>
+                      <button class="dropdown-item" type="button">Another action</button>
+                      <button class="dropdown-item" type="button">Something else here</button>
+                    </div>
+                  </div> -->
+                <select class="form-control form-control-sm w100pr" [ngModel]="defaultFacility"
+                    (change)="facilityChange($event)">
+                    <option *ngFor="let facility of facilities" [value]="facility.RecordId">{{facility.Name}}
+                    </option>
+                </select>
+
+            </div>
+            <!-- <div class="margin-lft-rgt flex-col-center">OR </div>
+            <div>
+                <select class="form-control form-control-sm w100pr" [ngModel]="defaultDoctor"
+                    (change)="doctorChange($event)">
+                    <option [value]="0">All Doctors</option>
+                    <option *ngFor="let doctor of doctorsSlim" [value]="doctor.RecordId">
+                        <span>DR.{{doctor.DoctorName}}(</span>
+                            <span class="font-12">{{doctor.Degree}})</span>
+                    </option>
+                </select>
+            </div> -->
+        </div>
+
+        <div class="main-link-div padd-font" style="overflow-x: hidden;">
+            <ng-container *ngFor="let doctor of doctors;let i = index;">
+                <div *ngIf="i % 2 == 0" class="row bottom-mgr-20">
+                    <div class="col-md-6 doc-img-div doc-img-padrgt animate__animated animate__slideInLeft">
+                        <div class="row">
+                            <div class="col-md-5 doctor-firsthalf">
+                                <img [src]="allDoctorImage[doctor.RecordId]?allDoctorImage[doctor.RecordId]:
+                                defaultImageSrc" class="doctor-image"/>
+                            </div>
+                            <div class="col-md-7 doctor-secondhalf">
+                                <div class="heading">DR. {{doctor.DoctorName | uppercase}}</div>
+                                <div>{{doctor.Degree}}</div>
+                                <hr class="doctor-txt-underline">
+                                <div class="heading">Department:</div>
+                                <div class="mgbtm">{{doctor.FacilityName}} </div>
+                                <div class="heading">Timing:</div>
+                                <div class="mgbtm">{{doctor.Timing}}</div>
+                                <div class="review-lnk" (click)="navigateToDoctorReview(doctor.RecordId)"><a>See Doctor's Reviews</a></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 doc-img-div doc-img-padlft animate__animated animate__slideInRight">
+                        <div class="row" *ngIf="i + 1 < doctors.length">
+                            <div class="col-md-5 doctor-firsthalf">
+                                <img [src]="allDoctorImage[doctors[i+1].RecordId]?allDoctorImage[doctors[i+1].RecordId]:
+                                defaultImageSrc" class="doctor-image"/>
+                            </div>
+                            <div class="col-md-7 doctor-secondhalf">
+                                <div class="heading">DR. {{doctors[i+1].DoctorName  | uppercase}}</div>
+                                <div>{{doctors[i+1].Degree}}</div>
+                                <hr class="doctor-txt-underline">
+                                <div class="heading">Department:</div>
+                                <div class="mgbtm">{{doctors[i+1].FacilityName}} </div>
+                                <div class="heading">Timing:</div>
+                                <div class="mgbtm">{{doctors[i+1].Timing}}</div>
+                                <div class="review-lnk" (click)="navigateToDoctorReview(doctors[i+1].RecordId)"><a>See Doctor's Reviews</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

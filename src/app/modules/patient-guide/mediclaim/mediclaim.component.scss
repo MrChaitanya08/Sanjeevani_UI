@@ -1,0 +1,10 @@
+.tpa-list{
+    div{
+        border: 1px solid #ebebeb;
+        border-bottom: 0px;
+        padding: 5px;
+    }
+    div:last-child{
+        border-bottom: 1px solid #ebebeb;
+    }
+}

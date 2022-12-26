@@ -1,0 +1,106 @@
+<div class="container-fluid bg-review">
+    <div class="row" id="reviewpage">
+        <div class="col-12">
+            <div class="review-cntr">
+                <div class="header">
+                    <h3>Contact Us</h3>
+                </div>
+                <div class="main-cntr">
+                    <p>
+                        Write to us for any queries. You may also contact us via our email address directly, or by
+                        calling us on our landline number.
+                    </p>
+                    <form [formGroup]="reviewForm" class="form-container mt-3">
+                        <div class="form-group">
+                            <label class="required-label">Your Name</label>
+                            <input type="text" class="form-control form-control-sm w50pr" formControlName="name"
+                                required autocomplete="off" [ngClass]="{'error-highlight':(reviewForm.controls['name'].dirty 
+                            || reviewForm.controls['name'].touched) && (reviewForm.controls['name'].errors)}">
+                        </div>
+                        <div class="flex-space-bt">
+                            <div class="form-group w-48pr">
+                                <label class="required-label">Phone Number</label>
+                                <input type="text" class="form-control form-control-sm " formControlName="phonenumber"
+                                    required autocomplete="off" maxlength="10" (keypress)="keyPress($event)"
+                                    [ngClass]="{'error-highlight':(reviewForm.controls['phonenumber'].dirty 
+                                || reviewForm.controls['phonenumber'].touched) && (reviewForm.controls['phonenumber'].errors)}">
+                            </div>
+                            <div class="form-group w-48pr">
+                                <label>Email Id</label>
+                                <input type="text" class="form-control form-control-sm " formControlName="emailId"
+                                    required autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="required-label">Requirement</label>
+                            <textarea class="form-control form-control-sm" rows="5" formControlName="requirement" required
+                                [ngClass]="{'error-highlight':(reviewForm.controls['requirement'].dirty 
+                                || reviewForm.controls['requirement'].touched) && (reviewForm.controls['requirement'].errors)}"></textarea>
+                        </div>
+                        <div class="btn-cntr">
+                            <button type="button" class="btn btn-primary mr10"
+                                [disabled]="reviewForm.pristine || reviewForm.invalid"
+                                (click)="submitInquiry()">SEND</button>
+                            <button type="button" class="btn btn-secondary" (click)="clearInquiry()">CANCEL</button>
+                        </div>
+
+                    </form>
+                    <hr class="hr-divider">
+                    <div class="row contact-div">
+                        <div class="col-md-6 no-padding bd-rght padd-col-bt">
+                            <div class="contact-heading f-bold">Hospital Reception</div>
+                            <div class="padd-bt">
+                                <span class="f-bold">Telephone :</span>
+                                <span> +91 22 28445678</span>
+                            </div>
+                            <div class="padd-bt">
+                                <span class="f-bold">Mobile :</span>
+                                <span> +91 9372641009</span>
+                            </div>
+                            <div class="padd-bt">
+                                <span class="f-bold">Fax :</span>
+                                <span> +91 22 28442058</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 padd-col-lft">
+                            <div class="contact-heading f-bold">Email Address</div>
+                            <div class="padd-bt">
+                                <span class="f-bold">Enquiry :</span>
+                                <span> enquiry@sanjeevanihospitalmalad.com</span>
+                            </div>
+                            <div class="padd-bt">
+                                <span class="f-bold">Email :</span>
+                                <span> info@sanjeevanihospitalmalad.com</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row contact-div bd-top">
+                        <div class="col-md-6 no-padding bd-rght padd-col-top">
+                            <div class="contact-heading f-bold">Mailing Address</div>
+                            <div class="padd-bt">
+                                <span class="f-bold">Sanjeevani Surgical & General Hospital</span>
+                                <br />
+                                <span>Bhawani Chambers, Kedarmal Road,<br />
+                                    Rani Sati Marg, Malad(E), <br />
+                                    Mumbai 400097
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 padd-social">
+                            <div class="contact-heading f-bold">Social Connect</div>
+                            <div class="padd-bt">
+                                <span class="f-bold">Join us on below platforms:</span>
+                                <div class="img-cont">
+                                    <div class="fb img-style"></div>
+                                    <div class="tw img-style"></div>
+                                    <div class="yout img-style"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

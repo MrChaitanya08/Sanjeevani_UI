@@ -1,0 +1,44 @@
+.mgr-top{
+    margin-top:40px;
+}
+.mgr-top-20{
+    margin-top: 20px;
+}
+.margin-top-sm{
+    margin-top: 30px;
+    @media (min-width:1200px) {
+        margin-top: 0px;
+    }
+}
+.visitor-box{
+    border:2px solid #f99b2f;
+    border-radius: 10px;
+    padding: 0px 25px;
+}
+.inpatient-text{
+    color:#19191B;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0px;
+    text-align: center;
+}
+.inpatient-timing{
+    color:black;
+    font-size: 16px;
+    padding: 15px 0px;
+    display: flex;
+    &.extra-padding{
+        padding: 42px 0px;
+    }
+}
+.inpatient-border{   
+    border-bottom: 1px solid #f99b2f;
+}
+.inpatient-days{
+    width: 40%;
+    text-align: left;
+}
+.inpatient-time{
+    width: 60%;
+    text-align: right;
+}

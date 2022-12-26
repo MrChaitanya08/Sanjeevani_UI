@@ -1,0 +1,160 @@
+<header class="row no-gutters header header-div">
+    <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+        <div class="logo d-flex align-items-center">
+            <img src="../../../assets/img/logo.jpg" alt="Sanjeevani - Care beyond cure"
+                title="Sanjeevani - Care beyond cure" (click)="navigateToHome()">
+        </div>
+    </div>
+    <div class="col-6 col-sm-8 col-md-9 col-xl-10">
+        <div class="contact-info d-flex justify-content-end align-items-center">
+            <a class="headercontact" href="tel:02228445678">
+                <span class="phone">
+                    <mat-icon>perm_phone_msg</mat-icon> +91 22 2844 5678
+                </span>
+            </a>
+            <a class="headercontact" href="mailto:enquiry@sanjeevanihospitalmalad.com?Subject=Hello%20There"
+                target="_top"><span class="d-none d-md-inline-block d-lg-inline-block">
+                    <span class="divider"></span>
+                    <span class="email">
+                        <mat-icon>email</mat-icon> enquiry@sanjeevanihospitalmalad.com
+                    </span>
+                </span></a>
+        </div>
+    </div>
+    <div class="col-xl-10 box">
+        <div class="d-flex">
+            <span class="triangle-bottomright d-none d-xl-block"></span>
+            <nav class="navbar navbar-expand-lg">
+                <!-- Toggler/collapsibe Button -->
+                <button (click)="isActive = !isActive" class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#collapsibleNavbar">
+                    <mat-icon><span #menuIcon>{{ isActive === false? 'menu': 'close' }}</span></mat-icon>
+                </button>
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar" [class.show]="isActive">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" (click)="selectMenu('home')" routerLinkActive="active"
+                                routerLink="home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" (click)="selectMenu('covid-19')" routerLinkActive="active"
+                                routerLink="covid-19">Covid-19</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-md-block d-none" (click)="isActive = false"
+                                routerLinkActive="active" routerLink="facilities">Facilities</a>
+                            <a class="nav-link d-block d-md-none"
+                                [ngClass]="{'selected-menu':selectedMenu=='facilities'}"
+                                (click)="showHodeSubMenu('facilities')">Facilities
+                                <span class="sub-menu-icon">
+                                    <i class="material-icons">
+                                        {{selectedSubmenu=='facilities'?'keyboard_arrow_up':'keyboard_arrow_down'}}
+                                    </i>
+                                </span>
+                            </a>
+                            <ul class="sub-menus" [ngClass]="{'active':selectedSubmenu=='facilities'}">
+                                <li (click)="navigateToSubmenu('/facilities')">All Facilities</li>
+                                <li (click)="navigateToSubmenu('/facilities/room')">Rooms</li>
+                                <li (click)="navigateToSubmenu('/facilities/pathology')">Pathology</li>
+                                <li (click)="navigateToSubmenu('/facilities/dialysis')">Dialysis</li>
+                                <li (click)="navigateToSubmenu('/facilities/icu')">ICU / ICCU</li>
+                                <li (click)="navigateToSubmenu('/facilities/maternity')">Maternity Home</li>
+                                <li (click)="navigateToSubmenu('/facilities/op')">Operation Theatre</li>
+                                <li (click)="navigateToSubmenu('/facilities/bloodbank')">Blood Bank</li>
+                                <li (click)="navigateToSubmenu('/facilities/pharmacy')">Pharmacy</li>
+                                <li (click)="navigateToSubmenu('/facilities/xray')">X-Ray</li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-md-block d-none" (click)="isActive = false"
+                                routerLinkActive="active" routerLink="specialities">Specialities</a>
+                            <a class="nav-link d-block d-md-none" (click)="showHodeSubMenu('specialities')"
+                                [ngClass]="{'selected-menu':selectedMenu=='specialities'}">Specialities
+                                <span class="sub-menu-icon">
+                                    <i class="material-icons">
+                                        {{selectedSubmenu=='specialities'?'keyboard_arrow_up':'keyboard_arrow_down'}}
+                                    </i>
+                                </span>
+                            </a>
+                            <ul class="sub-menus" [ngClass]="{'active':selectedSubmenu=='specialities'}">
+                                <li (click)="navigateToSubmenu('/specialities')">All Specialities</li>
+                                <li (click)="navigateToSubmenu('/specialities/surgery')">Surgery Performed</li>
+                                <li (click)="navigateToSubmenu('/specialities/cancercare')">Cancer Care</li>
+                                <li (click)="navigateToSubmenu('/specialities/cardiaccare')">Cardiac care</li>
+                                <li (click)="navigateToSubmenu('/specialities/medicaltourism')">Medical Tourism</li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-md-block d-none" (click)="isActive = false"
+                                routerLinkActive="active" routerLink="doctors">Doctors</a>
+                            <a class="nav-link d-block d-md-none" (click)="showHodeSubMenu('doctors')"
+                                [ngClass]="{'selected-menu':selectedMenu=='doctors'}">Doctors
+                                <span class="sub-menu-icon">
+                                    <i class="material-icons">
+                                        {{selectedSubmenu=='doctors'?'keyboard_arrow_up':'keyboard_arrow_down'}}
+                                    </i>
+                                </span>
+                            </a>
+                            <ul class="sub-menus" [ngClass]="{'active':selectedSubmenu=='doctors'}">
+                                <li (click)="navigateToSubmenu('/doctors')">Doctors List</li>
+                                <li (click)="navigateToSubmenu('/doctors/timetable')">Doctors Timetable</li>
+                                <li (click)="navigateToSubmenu('/doctors/doctor-review')">Doctors Review</li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" (click)="selectMenu('patient-guide')" routerLinkActive="active"
+                                routerLink="patient-guide">Patient's Guide</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-md-block d-none" (click)="isActive = false"
+                                routerLinkActive="active" routerLink="contact">Contact Us</a>
+                            <a class="nav-link d-block d-md-none" (click)="showHodeSubMenu('contact')"
+                                [ngClass]="{'selected-menu':selectedMenu=='contact'}">Contact Us
+                                <span class="sub-menu-icon">
+                                    <i class="material-icons">
+                                        {{selectedSubmenu=='contact'?'keyboard_arrow_up':'keyboard_arrow_down'}}
+                                    </i>
+                                </span>
+                            </a>
+                            <ul class="sub-menus" [ngClass]="{'active':selectedSubmenu=='contact'}">
+                                <li (click)="navigateToSubmenu('/contact/career')">Career</li>
+                                <li (click)="navigateToSubmenu('/contact')">Contact Us</li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" (click)="selectMenu('about-us')" routerLinkActive="active"
+                                routerLink="about-us">About Us</a>
+                        </li>
+                        <li class="nav-item mr-0 custom-v-align h-100">
+                            <a routerLink="write-review" (click)="selectMenu('write-review')" type="button"
+                                class="btn btn-primary review-btn">Write a review</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<div class="main-content-div">
+    <main class="main-content">
+        <router-outlet></router-outlet>
+    </main>
+
+    <footer>
+        <app-footer></app-footer>
+    </footer>
+</div>
+
+<div id="loadingIndicator" class="container-fluid" [hidden]="!showLoader">
+    <div class="row" style="height:100%;">
+        <div class="col-12 text-center flex-col-center">
+            <div>
+                <div class="flex-col-center">
+                    <div class="sanjeevani-loader"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

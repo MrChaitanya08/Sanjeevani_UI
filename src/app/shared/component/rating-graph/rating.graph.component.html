@@ -1,0 +1,74 @@
+<div class="w-100">
+    <div class="fnt-18 mb-6 fnt-bld">{{ratingName}} Ratings</div>
+    <div class="review-star mb-6">
+        <div class="float-left mr-10 mtp">
+            <ng-container *ngFor='let in of ratingCount;let i = index'>
+                <i class="material-icons star-color" *ngIf="i<averageRating;else noStar">
+                    grade
+                </i>
+                <ng-template #noStar>
+                    <i class="material-icons">
+                        grade
+                    </i>
+                </ng-template>
+            </ng-container>
+        </div>
+        <div class="float-left mr-10 fnt-22 mtp fnt-color">
+            <span>{{averageRating | number:'1.2-2'}} out of 5</span>
+        </div>
+    </div>
+    <div class="mgrtp-50 fnt-22">
+        {{_ratings?.length || 0}} {{ratingName}} Reviews
+    </div>
+    <div class="mgrtp-15">
+        <div class="row">
+            <div class="col-md-8 no-padding">
+                <div class="flex-start-div">
+                    <div class="mgr">5 Star</div>
+                    <div class="rating-graph-div">
+                        <div class="bar" [ngStyle]="{'width':ratingPercentage[5]+'%'}">
+                            &nbsp;
+                        </div>
+                    </div>
+                    <div class="mgl">{{getRatingPercentage(5)}}%</div>
+                </div>
+                <div class="flex-start-div">
+                    <div class="mgr">4 Star</div>
+                    <div class="rating-graph-div">
+                        <div class="bar" [ngStyle]="{'width':ratingPercentage[4]+'%'}">
+                            &nbsp;
+                        </div>
+                    </div>
+                    <div class="mgl">{{ratingPercentage[4]}}%</div>
+                </div>
+                <div class="flex-start-div">
+                    <div class="mgr">3 Star</div>
+                    <div class="rating-graph-div">
+                        <div class="bar" [ngStyle]="{'width':ratingPercentage[3]+'%'}">
+                            &nbsp;
+                        </div>
+                    </div>
+                    <div class="mgl">{{ratingPercentage[3]}}%</div>
+                </div>
+                <div class="flex-start-div">
+                    <div class="mgr">2 Star</div>
+                    <div class="rating-graph-div">
+                        <div class="bar" [ngStyle]="{'width':ratingPercentage[2]+'%'}">
+                            &nbsp;
+                        </div>
+                    </div>
+                    <div class="mgl">{{ratingPercentage[2]}}%</div>
+                </div>
+                <div class="flex-start-div">
+                    <div class="mgr">1 Star</div>
+                    <div class="rating-graph-div">
+                        <div class="bar" [ngStyle]="{'width':ratingPercentage[1]+'%'}">
+                            &nbsp;
+                        </div>
+                    </div>
+                    <div class="mgl">{{ratingPercentage[1]}}%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

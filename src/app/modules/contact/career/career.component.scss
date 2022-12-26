@@ -1,0 +1,165 @@
+@import '../../../../assets/scss/variable.scss';
+
+.page-main-banner{
+    height: 165px;
+    @media (min-width: 1200px) {
+        height: 150px;
+    }
+}
+.career-main{
+    font-size: 16px;
+    color:#255471;
+    .row{
+        margin-left:0px;
+        margin-right:0px;
+    }
+}
+.career-outer-div{
+    padding:10px 25px 0px 25px;    
+    @media screen and (min-width:1200px){        
+        padding: 10px 60px 50px 90px;
+        .flex-col{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .padd-rght{
+            padding-right:20px !important;
+        }
+        .padd-lft{
+            padding-left:20px !important;
+        }
+    }
+    .form-outer-div{
+        border:1px solid #dedede;
+        padding:10px 0px;
+        @media screen and (min-width:1200px){        
+            padding:20px;
+        }
+        .form-disclaimer{
+            padding-left: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #dedede;
+            @media screen and (min-width:1200px){        
+                padding-bottom: 0px;
+                border-bottom: 0px;
+            }
+        }
+    }
+    .form-main-div{
+        padding: 15px 0px;
+        @media screen and (min-width:1200px){        
+            padding: 25px 0px;
+        }
+        .first-half{
+            @media screen and (min-width:1200px){        
+                border-right:1px solid #dedede;
+            }
+            
+            .file-div{
+                padding-bottom: 10px;
+            }
+        }
+        .second-half{
+            padding-left:0px;
+            padding-right: 0px;
+            .form-elem{
+                label{
+                    font-size: 14px !important;
+                    margin-bottom: 4px !important;
+                }
+                
+            }
+            @media screen and (min-width:1200px){        
+                padding-left:30px;
+            }
+            .form-div{
+                padding:20px 0px;
+            }
+            .header-div{
+                padding-bottom: 5px;
+            }
+        }
+    }
+    .mgr-tp{
+        margin-top:10px;
+    }
+    .col-no-padd{
+        padding:0px;
+    }
+    .career-header{
+        color:#19191B;
+        font-size: 30px;
+        font-weight: bold;    
+        margin-top: 25px; 
+    }
+    .flex-start-div{
+        @media (min-width: 1200px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start
+        }
+    }
+    .filter-header{
+        margin-top:25px;
+    }
+    .mgrgt-15{
+        margin-bottom: 15px;
+        @media (min-width: 1200px) {
+            margin-right: 10px;
+        }
+    }
+    table {
+        width:100%;
+        border: 1px solid #dedede;
+        border-collapse: collapse;
+    }  
+    th, td {
+        border: 1px solid #dedede;
+        padding: 15px 0px 15px 10px;
+    }
+    thead{
+        background-color: #255471;
+        color: #fff;
+    }
+    .width-1{
+        width:15%;
+    }
+    .width-2{
+        width:20%;
+    }
+    .width-3{
+        width:35%;
+    }
+    .career-div{
+        margin-top:30px;
+    }
+    .career-secondhalf{
+        border:1px solid #E6E6E6;
+        border-radius: 8px;
+        height: 50%;
+        width: 100%;
+        padding: 10px 15px;
+        font-size:15px;
+        .heading{
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .mgbtm{
+            margin-bottom: 10px;
+        }
+        .career-txt-underline{
+            border-top: 2px solid #E6E6E6;
+            margin: 5px 0px;
+            margin-bottom: 15px;
+            width:100%;
+        }
+        .padd-div{
+            padding: 6px 0px;
+            > div:first-child{
+                font-weight: bold;
+                font-size: 16px;
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.patient-guide-main{
+    font-size: 16px;
+    color:#255471;
+    .row{
+        margin-left:0px;
+        margin-right:0px;
+    }
+}
+
+.menu-details-div{
+    clear: both;
+    padding:5px 0px 40px;
+}
+.ptguideMenu{
+    margin: 20 0px;
+    width: 100%;
+    padding: 0px 15px 40px;
+    @media (min-width: 1200px) {
+        padding: 0px;
+    }
+    .menu-div{
+        @media (min-width: 1200px) {
+            float: left;
+            width: 20%;
+            border-right: 0;
+            text-align: center;
+        }
+        width: 100%;
+        padding: 12px;
+        color: #9294A8;
+        border: 1px solid #9294A8;        
+        text-align: left;
+        cursor: pointer;
+        &.active{
+            color: #255471;
+            border: 1px solid #F6F6F6;
+            background-color: #F6F6F6;
+            border-bottom: 2px solid #f99b2f;
+        }
+    }
+    .border-right-div{
+        border-right: 1px solid #9294A8;
+        @media (min-width: 1200px) {
+            border-right: 1px solid #9294A8 !important;
+        }
+    }
+}
+
+.txt-underline{
+    border-top: 5px solid #f99b2f;
+    margin: 6px 0px;
+    width:20%;
+    @media (min-width: 1200px) {
+      width:7%;
+    }
+}
+.patient-guide-header{
+    color:#19191B;
+    font-size: 30px;
+    font-weight: bold;    
+    margin-top: 25px; 
+}
+.patient-guide-sub-header{
+    font-size:16px;
+}

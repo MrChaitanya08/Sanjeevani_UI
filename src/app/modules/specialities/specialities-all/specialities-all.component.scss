@@ -1,0 +1,98 @@
+.specialities-all{
+    .col-md-4{
+        margin-bottom: 25px;
+        @media (min-width: 1200px) {
+            margin-bottom: 0px;
+        }
+    }
+}
+.specialities-types{
+        height: 400px;
+        cursor: pointer;
+	&:hover{
+        transform: scale(1.03);
+    }
+}
+.pad35{
+    padding: 0px 30px;
+}
+.top-margin{
+    margin-top: 0px;
+    @media (min-width: 1200px) {
+        margin-top: 40px;
+    }
+}
+.bottom-margin{
+    margin-bottom: 0px;
+    @media (min-width: 1200px) {
+        margin-bottom: 40px;
+    }
+}
+
+.specialities-firsthalf{
+    border:1px solid #E6E6E6;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 55%;
+    width: 100%;
+    
+}
+.specialities-secondhalf{
+    border:1px solid #E6E6E6;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 45%;
+    width: 100%;
+    @media screen and (min-width:1200px){
+        padding: 10px 20px;
+    }
+    padding: 10px 15px;
+}
+.fac-header{
+    font-size: 18px;
+    color:#255471;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.fac-subheader{
+    font-size: 14px;
+    color:#255471;
+    margin-bottom: 10px;
+}
+.learn-more{
+    position: absolute;
+    font-size: 14px;
+    color:#F99B2F;
+    padding-bottom: 10px;
+    bottom: 0px;
+}
+.specialities-surgery-img{
+    background: url('../../../../assets/img/specialities/specialities_home/surgery_home.jpg') no-repeat;
+    background-size: 100% 100%;
+    
+}
+.specialities-cancercare-img{
+    background: url('../../../../assets/img/specialities/specialities_home/cancer_home.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.specialities-cardiaccare-img{
+    background: url('../../../../assets/img/specialities/specialities_home/cardiac_home.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.specialities-stemcell-img{
+    background: url('../../../../assets/img/specialities/specialities_home/stemcell_home.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.specialities-newborn-img{
+    background: url('../../../../assets/img/specialities/specialities_home/newbornscreening_home.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.specialities-medicaltour-img{
+    background: url('../../../../assets/img/specialities/specialities_home/medicaltourism_home.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+
+#first-spec-row,
+#second-spec-row{
+    min-height: 390px;
+}

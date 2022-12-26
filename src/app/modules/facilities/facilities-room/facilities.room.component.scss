@@ -1,0 +1,81 @@
+
+.room-main{
+    font-size: 14px;
+    color:#255471;
+    .row{
+        margin-left:0px;
+        margin-right:0px;
+    }
+    .flexslider {
+        height: calc(100vh - 520px) !important;
+        @media screen and (min-width:1200px){
+            height: calc(100vh - 250px) !important;
+        }
+      }
+      .flexslider .slides img {
+        height: calc(100vh - 520px) !important;
+        @media screen and (min-width:1200px){
+            height: calc(100vh - 250px) !important;
+        }
+      }
+}
+.room-outer-div{
+    padding: 0px 15px;
+}
+.room-header{
+    padding: 20px 15px 20px;
+    width: 100%;
+    font-size: 16px;
+}
+.room-title{
+    border:1px solid #bebebe;
+    padding: 5px 25px;
+}
+
+.notop-border-row{
+    border:1px solid #bebebe;
+    border-top:0px;  
+    
+}
+.img-div{
+    height: 500px;
+    @media (min-width: 1200px) {
+        height: 290px;
+    }
+}
+.facilities-room1{
+    background: url('../../../../assets/img/facilities/facilities_room/room1.jpg') no-repeat;
+    background-size: 100% 100%;
+    height: 40%;
+    @media (min-width: 1200px) {
+        height: auto;
+    }
+}
+.facilities-room2{
+    background: url('../../../../assets/img/facilities/facilities_room/room2.jpg') no-repeat;
+    background-size: 100% 100%;
+    height: 40%;
+    @media (min-width: 1200px) {
+        height: auto;
+    }
+}
+.facilities-room3{
+    background: url('../../../../assets/img/facilities/facilities_room/room3.jpg') no-repeat;
+    background-size: 100% 100%;
+    height: 40%;
+    @media (min-width: 1200px) {
+        height: auto;
+    }
+}
+.facilities-room1-txt{
+    padding: 20px 30px;
+}
+.fac-subheader-txt{
+    padding-bottom: 10px;
+    font-weight: 600 !important;
+}
+.sub-header{
+    div{
+        padding-bottom: 5px;
+    }
+}

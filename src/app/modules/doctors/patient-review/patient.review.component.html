@@ -1,0 +1,98 @@
+<div class="row page-main-banner page-header-banner-img">
+    <div class="col-12 facilities-txt">
+        <div>
+            <div class="big-facilities-txt">Doctors Reviews</div>
+            <div class="small-facilities-txt">Sanjeevani hospital has more than 41 doctor consultants for almost all of
+                your health needs.</div>
+            <div class="small-facilities-txt">All doctors associated with Sanjeevani are highly trained and have
+                tremendous experience in their ﬁeld of expertise.</div>
+        </div>
+    </div>
+</div>
+
+<div class="doctor-main">
+    <app-breadcrum [showTitle]="false"></app-breadcrum>
+
+    <div class="commom-padding">
+        <div class="doctor-header flex-start-div">
+            <div class="mgrgt-15 filter-center">Select Doctor: </div>
+            <div>
+                <select class="form-control form-control-sm w100pr" [ngModel]="selectedDoctorRecordId"
+                    (change)="doctorChange($event)">
+                    <option *ngFor="let doctor of doctorsSlim" [value]="doctor.RecordId">
+                        <span>DR.{{doctor.DoctorName}}(</span>
+                        <span class="font-12">{{doctor.Degree}})</span>
+                    </option>
+                </select>
+            </div>
+        </div>
+
+        <div class="main-link-div padd font-18">
+            <!-- <ng-template *ngIf="doctor"> -->
+            <!-- <div class="col-md-12 "> -->
+            <div class="row doc-img-div doc-img-padrgt">
+                <div class="col-md-4 firsthalf-image">
+                    <img [src]="doctorImageSrc" class="doctor-image" />
+                </div>
+                <div class="col-md-8 doctor-secondhalf">
+                    <div class="heading-name">DR. {{selectedDoctor?.DoctorName | uppercase}}</div>
+                    <div class="doc-font">{{selectedDoctor?.Degree}}</div>
+                    <div><a href="/#/write-review" class="write-review">Write Review</a></div>
+                    <hr class="doctor-txt-underline">
+                    <div class="mgbtm flex-start-div">
+                        <div class="doc-font fnt-bld" style="margin-right: 10px;">Department: </div>
+                        <div class="doc-font"> {{selectedDoctor?.FacilityName}} </div>
+                    </div>
+                    <div class="mgbtm flex-start-div">
+                        <div class="doc-font fnt-bld" style="margin-right: 10px;">Timing: </div>
+                        <div class="doc-font"> {{selectedDoctor?.Timing}}</div>
+                    </div>
+                    <div class="mgrtp-20 fnt-18">
+                        <app-rating-graph [ratingName]="'Patient'" [ratings]="actualRating">
+                        </app-rating-graph>
+                    </div>
+
+                </div>
+            </div>
+            <!-- </div> -->
+            <!-- </ng-template> -->
+            <div class="title pat-review-title">
+                <span>Patient Feedback
+                    <hr class="title-underline">
+                </span>
+
+            </div>
+
+            <!-- Review section -->
+            <div class="reviews" *ngFor="let item of patientReviews">
+                <div class="review-brief mb-6">
+                    {{item.Title}}
+                </div>
+                <div class="review-star mb-6">
+                    <div class="float-left mr-10">
+                        <ng-container *ngFor='let in of ratingCount;let i = index'>
+                            <i class="material-icons star-color" *ngIf="i<item.Rating;else noStar">
+                                grade
+                            </i>
+                            <ng-template #noStar>
+                                <i class="material-icons">
+                                    grade
+                                </i>
+                            </ng-template>
+                        </ng-container>
+                    </div>
+                    <div class="float-left mr-10 mtp-3">
+                        By: <span class="by-div">{{item.PatientName}}</span>
+                    </div>
+                    <div class="float-left mtp-3">({{item.CreateDate | date:'dd/MM/yyyy'}})</div>
+                </div>
+                <div class="clear review-text">
+                    {{item.Review}}
+                </div>
+            </div>
+
+            <div class="pb-20" *ngIf="!patientReviews || patientReviews.length==0">
+                No Reviews available for Dr. {{selectedDoctor?.DoctorName}}
+            </div>
+        </div>
+    </div>

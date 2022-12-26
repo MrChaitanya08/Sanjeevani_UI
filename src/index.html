@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Sanjeevani</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/flexslider.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css">
+  <script type="text/javascript" src="assets/script/jquery.min.js"></script>
+  <script src="assets/script/jquery.flexslider-min.js"></script>
+  <script src="assets/script/google-places.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyAHV31h1w3_6GUAoTPva5ONlsewrSwyxzI"></script>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+  </style>
+  <style>
+    #loadingIndicator {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      /* //background: #303036; */
+      background-color: rgba(48, 48, 54, 0.77);
+      color: #fff;
+      overflow: hidden;
+      z-index: 100000;
+    }
+
+    .txt-span {
+      color: #e7c900;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .sanjeevani-loader {
+      height: 60px;
+      width: 60px;
+      background-image: url('/assets/images/chessloader.gif');
+      background-size: 72px 60px;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+
+<body>
+  <app-root>
+    <div id="loadingIndicator" class="container-fluid" >
+      <div class="row" style="height:100%;">
+        <div class="col-12 text-center flex-col-center">
+          <div>
+            <div class="flex-col-center">
+              <div class="sanjeevani-loader"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </app-root>
+</body>
+
+</html>

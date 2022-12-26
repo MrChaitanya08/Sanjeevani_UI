@@ -1,0 +1,121 @@
+@import '../../../assets/scss/variable.scss';
+
+.bg-review {
+    background: url(../../../assets/img/about/about_sanjeevani_back.jpg) no-repeat fixed center;
+    background-size: cover;
+    min-height: calc(100vh - 300px);
+    .backdrop {
+        min-height: calc(100vh - 300px);
+        background: #f6f5f5;
+    }
+    .review-cntr {
+        z-index: 1;
+        position: relative;
+        margin: 1rem auto;
+        border-radius: 5px;
+        background: $white;
+    }
+    .header {
+        background: $primary-color;
+        border-radius: 5px 5px 0 0;
+        text-align: center;
+    }
+    h3 {
+        color: $white;
+        line-height: 4rem;
+        font-weight: normal;
+    }
+    .main-cntr {
+        padding: 1rem 2rem 2rem;
+    }
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .form-container>* {
+        width: 100%;
+    }
+    .mat-flat-button {
+        min-width: 130px;
+        text-transform: uppercase;
+        margin: 0 1rem;
+        border-radius: 10px;
+        border: 1px solid transparent;
+        &.mat-flat-button.mat-primary {
+            background: $primary-color;
+        }
+    }
+    .btn-cntr {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    .note-cntr {
+        background: #fbe8aa;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        margin: 1rem 0;
+        p,
+        a {
+            font-size: 0.875rem;
+            line-height: 1.5rem;
+            margin: 0;
+        }
+    }
+    .blue-txt {
+        color: $secondary-color;
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+        margin: 10px 0 26px 0px;
+        text-align: center;
+    }
+    .review-star {
+        font-size: 14px;
+        color: #C8D0D6;
+    }
+    .hand-pointer{
+        cursor: pointer;
+    }
+    .star-color {
+        color: #FFBC27;
+    }
+    lable {
+        color: $secondary-color
+    }
+    .img-cntr {
+        max-width: 300px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .title {
+        font-size: 1rem;
+        color: $dark-grey;
+        display: block;
+        margin-bottom: 16px;
+    }
+}
+
+@media (min-width: 992px) {
+    .review-cntr {
+        max-width: 850px;
+    }
+    .form-container .mat-form-field {
+        max-width: 50%;
+    }
+    .bg-review .img-cntr {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .bg-review .blue-txt {
+        text-align: left;
+        width: 50% !important;
+    }
+}
+#reviewpage{
+   .form-container label{
+       font-size: 14px;
+   }
+}

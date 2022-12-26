@@ -1,0 +1,93 @@
+<div class="container-fluid footer">
+    <mat-accordion class="row custom-accordion no-gutters" #accordion="matAccordion">
+        <div class="col-lg-3">
+            <mat-expansion-panel [expanded]="true">
+                <mat-expansion-panel-header [collapsedHeight]="headerHight" [expandedHeight]="headerHight">
+                    <mat-panel-title>
+                        Contact Us
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <form #contactUsForm="ngForm" (ngSubmit)="submitInquiry()" class="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Name" [(ngModel)]="name" name="name" maxlength="50" required autocomplete="off" pattern="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Phone Number" [(ngModel)]="phone" name="phone" maxlength="10" required autocomplete="off" pattern="^[6-9]\d{9}$" />
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="Message" [(ngModel)]="message" name="message" maxlength="120" required autocomplete="off"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-secondary mt-1" [disabled]="!contactUsForm.valid">Submit</button>
+                </form>
+            </mat-expansion-panel>
+        </div>
+        <div class="col-lg-3">
+            <mat-expansion-panel [expanded]="false">
+                <mat-expansion-panel-header [collapsedHeight]="headerHight" [expandedHeight]="headerHight">
+                    <mat-panel-title>
+                        About Us
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <ul class="footer-link">
+                    <li><a [routerLink]="['/about-us']" fragment="about_sanjeevani">About Sanjeevani</a></li>
+                    <li><a [routerLink]="['/about-us']" fragment="mission">Vision and Mission</a></li>
+                    <li><a [routerLink]="['/about-us']" fragment="values">Our Values</a></li>
+                    <li><a [routerLink]="['/about-us']" fragment="core_team">Our Core Team</a></li>
+                    <li><a  [routerLink]="['/doctors/doctor-review']">Patient Feedback</a></li>
+                </ul>
+            </mat-expansion-panel>
+        </div>
+        <div class="col-lg-3">
+            <mat-expansion-panel [expanded]="false">
+                <mat-expansion-panel-header [collapsedHeight]="headerHight" [expandedHeight]="headerHight">
+                    <mat-panel-title>
+                        Patient's Guide
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <ul class="footer-link">
+                    <li><a [routerLink]="['/patient-guide/appointments']">Appoinments</a></li>
+                    <li><a [routerLink]="['/patient-guide/admission']">Admission Process</a></li>
+                    <li><a [routerLink]="['/patient-guide/discharge']">Discharge Process</a></li>
+                    <!-- <li><a>Housekeeping</a></li>
+                    <li><a>Facility Management</a></li> -->
+                    <li><a [routerLink]="['/patient-guide/accident']">Accident And Emergency</a></li>
+                    <li><a [routerLink]="['/patient-guide/ambulance']">Ambulance Services</a></li>
+                </ul>
+            </mat-expansion-panel>
+        </div>
+        <div class="col-lg-3">
+            <mat-expansion-panel [expanded]="false">
+                <mat-expansion-panel-header [collapsedHeight]="headerHight" [expandedHeight]="headerHight">
+                    <mat-panel-title>
+                        Reach Us
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <address>
+          <div>
+            <p>Sanjeevani Surgical & General Hospital</p>
+            <p><span class="small-font">Bhavani Chambers, Kedarmal Road,</span></p>
+            <p><span class="small-font">Rani Sati Marg, Malad (E),</span></p>
+            <p><span class="small-font">Mumbai 400097</span></p>
+          </div>
+          <div class="mt-4">
+            <p>Hospital Reception</p>
+            <p>Telephone : <span class="small-font">+91 22 28445678</span> </p>
+            <p>Mobile :  <span class="small-font">+91 9892056253</span></p>
+            <p>Fax : <span class="small-font">+91 22 28442058</span></p>
+            <p>E-mail : <span class="small-font">sanjeevanihospitalmalad@gmail.com</span></p>
+            <a href="https://sanjeevanihospitalmalad.com"><p>Website : <span class="small-font">www.sanjeevanihospitalmalad.com</span></p></a>
+          </div>
+
+            <div class="mt-4 custom-v-align">
+              <span class="large-font">Connect with us:</span>
+              <a class="icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              <a class="icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              <a class="icon"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+            </div>
+
+        </address>
+            </mat-expansion-panel>
+        </div>
+    </mat-accordion>
+    <p class="copy-right">&copy; 2009-2020 Sanjeevani Surgical & General Hospital. All Rights Reserved.</p>
+</div>

@@ -1,0 +1,225 @@
+select:focus {outline: 0 !important;}
+.page-main-banner{
+    height: 165px;
+    @media (min-width: 1200px) {
+        height: 150px;
+    }
+  } 
+
+.doctor-main{
+    font-size: 14px;
+    color: #255471;
+}
+.doctor-outer-div{
+    padding: 0px 15px;
+}
+.doctor-header{
+    padding:5px 15px 25px 15px;
+    width: 100%;
+    font-size: 14px;
+    color:black;
+    font-weight: bold;
+    @media (min-width: 1200px) {
+        padding:5px 0px 25px 15px;
+    }
+}
+.flex-start-div{
+    @media (min-width: 1200px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}
+.notop-border-row{
+    border:1px solid #bebebe;
+    border-top:0px;  
+    
+}
+.doc-img-div{    
+    margin-bottom: 25px;
+    @media (min-width: 1200px) {
+        margin-bottom: 0px;
+    }
+    .row{
+        height: 100%;
+    }
+}
+.width-18{
+width: 18%;
+}
+.doc-img-padrgt{
+    padding-left: 0px;
+    padding-right: 0px;
+    @media (min-width: 1200px) {
+        padding-right: 15px;
+      }
+}
+.doc-img-padlft{
+    padding-left: 0px;
+    padding-right: 0px;
+    @media (min-width: 1200px) {
+        padding-left: 15px;
+      }
+}
+.firsthalf-image{
+    padding: 0 !important;
+    border:1px solid #E6E6E6;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0px;
+    width: 100%;
+    height: 280px;
+    @media (min-width: 1200px) {
+        height: 520px;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        border-top-right-radius: 0px;
+      }
+}
+.doctor-image{   
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+.doctor-secondhalf{
+    border:1px solid #E6E6E6;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 0px;
+    height: 50%;
+    @media (min-width: 1200px) {
+        height: 100%;
+        border-bottom-right-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 0px;
+        padding: 10px 25px;
+      }
+    width: 100%;
+    padding: 6px 10px;
+}
+.heading-name{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.doctor-txt-underline{
+    border-top: 2px solid #E6E6E6;
+    margin: 5px 0px;
+    margin-bottom: 15px;
+    width:100%;
+}
+.mgbtm{
+    margin-bottom: 10px;
+}
+.review-lnk{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: absolute;    
+    bottom: 0;
+    font-size: 16px;
+}
+.mgrgt-15{
+    margin-bottom: 5px;
+    @media (min-width: 1200px) {
+        margin-bottom: 0px;
+        margin-right: 15px;
+    }
+}
+.margin-lft-rgt{
+    margin: 3px 0px;
+    @media (min-width: 1200px) {
+        margin:0px 10px;
+    }
+}
+.font-12{
+    font-size: 12px;
+}
+.font-18{
+    font-size: 18px;
+}
+.padd{
+    padding-right: 15px;
+    padding-left: 15px;
+    @media (min-width: 1200px) {
+        padding-right: 0px;
+    }
+}
+.filter-center{
+    @media (min-width: 1200px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }    
+}
+.bottom-mgr-20{
+    @media (max-width: 1200px) {
+      margin-bottom: 0px;
+    }
+}
+.pat-review-title{
+    margin-top:20px;
+    padding-left: 0px;
+}
+
+// review section
+.reviews {
+    margin-bottom: 30px;
+}
+.review-brief {
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+}
+.mb-6 {
+    margin-bottom: 6px;
+}
+.review-star {
+    font-size: 14px;
+    color: #C8D0D6;
+    width: 100%;
+}
+.mr-10 {
+    margin-right: 10px;
+}
+.star-color {
+    color: #FFBC27;
+}
+.mtp-3 {
+    margin-top: 3px;
+}
+
+.by-div {
+    color: #255471;
+    font-weight: bold;
+    font-style: italic
+}
+.review-text {
+    font-size: 18px;
+    color: #000;
+}
+.doctor-desig {
+    font-size: 22px;
+    width: 100%;
+    //color: #f3f3f3;
+}
+.pb-20{
+    padding-bottom: 20px;
+}
+@media(max-width:320px) {
+    .mr-10 {
+        margin-right: 3px !important;
+    }
+    .review-star .material-icons {
+        font-size: 22px;
+    }
+}
+
+.write-review{
+    font-weight: bold;
+    color: #f99b2f;
+}
+
+.doc-font{
+    font-size: 16px !important;
+}

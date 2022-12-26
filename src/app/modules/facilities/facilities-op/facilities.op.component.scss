@@ -1,0 +1,47 @@
+
+.op-main{
+    font-size: 16px;
+    color:#255471;
+    .row{
+        margin-left:0px;
+        margin-right:0px;
+    }
+    // .flexslider{
+    //     max-height: 500px;
+    //     @media (min-width: 1200px) {
+    //         height: 430px;
+    //     }
+    // }
+}
+.notop-border-row{
+    border:1px solid #255471;
+    border-top:0px;  
+    
+}
+.room-title{
+    border: 1px solid #bebebe;
+    padding: 10px 25px;
+    color:white;
+    background-color: #255471;
+}
+.border-op{
+    border-bottom: 1px solid #bebebe;
+    @media (min-width: 1200px) {
+        border-right: 1px solid #bebebe;
+    }
+}
+.facilities-op-txt{
+    padding: 20px 30px;
+    
+}
+.fac-subheader-txt{
+    padding-bottom: 10px;
+}
+.sub-header{
+    div{
+        padding-bottom: 5px;
+    }
+}
+.margin-top{
+    margin-top:30px;
+}

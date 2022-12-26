@@ -1,0 +1,124 @@
+@import '../../../../assets/scss/variable.scss';
+.footer {
+    background: #305063;
+    color: $white;
+    padding: 2rem 0 1rem;
+    p {
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+    }
+    address {
+        margin-bottom: 0;
+    }
+    .small-font {
+        font-size: 0.845rem;
+    }
+    .large-font {
+        font-size: 1rem;
+        font-weight: 500;
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .copy-right {
+        padding-top: 1rem;
+        text-align: center;
+        margin: 0;
+        font-size: 0.845rem;
+        font-weight: normal;
+    }
+    .fa {
+        font-size: 1.2rem;
+    }
+    .icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        text-align: center;
+        background: $white;
+        color: $black;
+        margin: 0 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+ul.footer-link {
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    li {
+        margin-bottom: 1rem;
+        padding: 0;
+    }
+}
+
+.mat-expansion-panel {
+    box-shadow: none !important;
+    color: $white;
+    background: none;
+    a {
+        color: $white;
+    }
+}
+
+.mat-expansion-panel-header:hover {
+    background: none !important;
+}
+
+.mat-expansion-panel-header-title {
+    color: #45b8fb;
+    font-size: 16px;
+    font-weight: 500;
+    @media screen and (min-width:1200px){
+        font-size: 18px;
+    }
+}
+
+.mat-expansion-panel-body {
+    padding: 0 1.5rem 1rem;
+}
+
+.form-control {
+    background: #48616f;
+    color: $white;
+    border: 1px solid $light-grey;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $white;
+    opacity: 1;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $white;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: $white;
+}
+
+.btn-secondary {
+    background: $sky-blue;
+    border: 1px solid $sky-blue;
+    min-width: 120px;
+    border-radius: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    @media screen and (min-width:1200px){
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 768px) {
+    .mat-expansion-panel-spacing {
+        margin: 0;
+    }
+}
